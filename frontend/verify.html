@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO App</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <script type="text/javascript" src="js/aws-sdk.min.js"></script>
+        <script type="text/javascript" src="js/amazon-cognito-identity.min.js"></script>
+        <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/config.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 border mt-5 p-3">
+                    <h2 class="border-bottom pb-1">Verify User</h2>
+                    <div class="alert alert-danger d-none" id="verify_alert"></div>
+                    <form id="verify_form">
+                        <div class="form-group">
+                            <label for="code">Code</label>
+                            <input type="text" name="code" id="verify_code" class="form-control" required="required" />
+                        </div>
+                        <button type="submit" class="btn btn-primary" id="verifySubmit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="js/init-cognito.js"></script>
+        <script type="text/javascript" src="js/verify.js"></script>
+    </body>
+</html>

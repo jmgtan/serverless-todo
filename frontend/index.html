@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO App</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <script type="text/javascript" src="js/aws-sdk.min.js"></script>
+        <script type="text/javascript" src="js/amazon-cognito-identity.min.js"></script>
+        <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/config.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 border mt-5 p-3">
+                    <h2 class="border-bottom pb-1">Login</h2>
+                    <div class="alert alert-danger d-none" id="login_alert"></div>
+                    <div class="alert alert-success d-none" id="login_success"></div>
+                    <form id="login_form">
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" name="email" id="login_email" class="form-control" required="required" />
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" name="password" id="login_password" class="form-control" required="required" />
+                        </div>
+                        <button type="submit" class="btn btn-primary" id="loginSubmit">Submit</button>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 border mt-5 p-3">
+                    <h2 class="border-bottom pb-1">Register</h2>
+                    <div class="alert alert-danger d-none" id="register_alert"></div>
+                    <form id="register_form">
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" name="email" id="register_email" class="form-control" required="required" />
+                        </div>
+                        <div class="form-group">
+                                <label for="given_name">Given Name</label>
+                                <input type="text" name="given_name" id="register_given_name" class="form-control" required="required" />
+                            </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" name="password" id="register_password" class="form-control" required="required" />
+                        </div>
+                        <div class="form-group">
+                                <label for="password">Confirm Password</label>
+                                <input type="password" name="confirm_password" id="register_confirm_password" class="form-control" required="required" />
+                            </div>
+                        <button type="submit" class="btn btn-primary" id="registerSubmit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="js/init-cognito.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+    </body>
+</html>

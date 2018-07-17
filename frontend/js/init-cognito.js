@@ -1,0 +1,1 @@
+var userPool = new AmazonCognitoIdentity.CognitoUserPool(configuration.CognitoUserPool);
