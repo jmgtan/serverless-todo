@@ -6,7 +6,6 @@ exports.handler = async (event) => {
     var ddb = new AWS.DynamoDB();
     var params = {
         TableName: "todo_items",
-        IndexName: "user_id-timestamp-index",
         KeyConditionExpression: "user_id = :userId",
         ExpressionAttributeValues: {
             ":userId": {
@@ -27,7 +26,10 @@ exports.handler = async (event) => {
     } catch (err) {
         return {
             statusCode: 500,
-            body: JSON.stringify(err)
+            body: JSON.stringify(err),
+            headers: {
+                "Access-Control-Allow-Origin": "*"
+            }
         }
     }
 };
